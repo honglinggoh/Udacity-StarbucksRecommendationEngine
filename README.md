@@ -14,7 +14,7 @@ There should be no additional libraries to run the code here beyond the Anaconda
 
 ## Project Motivation<a name="motivation"></a>
 
-I was interested to learn more about hotel line of business data which i merely came across before.  Hence I had selected hotel booking demand data set from Kaggle for the purpose of this project.
+This project will use the simulated data that mimics customer behavior on the Starbucks rewards mobile app to develop a machine learning engine for product offer recommendation. Will explore the different recommendations methodology that can help to improve the customer engagements and purchases volumes via more personalize customer product offering.
 
 There are 3 questions that I was looking focusing on around bookings cancellation.
 
@@ -25,10 +25,20 @@ There are 3 questions that I was looking focusing on around bookings cancellatio
 
 ## File Descriptions <a name="files"></a>
 
+  1. 
+  Data Sets
+The data is contained in three files:
+
+portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
+profile.json - demographic data for each customer
+transcript.json - records for transactions, offers received, offers viewed, and offers completed
+Here is the schema and explanation of each variable in the files:
+
 "hotel_bookings.csv" is the data file that I downloaded from Kaggle which consists of City and Resort Hotels (from Europe) booking transactions from year 2015-2017.
 
 Hotel Booking.ipynb notebook is to showcase work related to the above questions.  I separated the notebook to multiple sections of exploratory analysis that lead to answering the questions above.  Markdown cells were used to assist in walking through the thought process for individual steps.  
 
+  2. 
 
 ## Results<a name="results"></a>
 
