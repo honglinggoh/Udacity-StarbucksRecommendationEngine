@@ -18,9 +18,9 @@ There should be no additional libraries to run the code here beyond the Anaconda
 This project is using the simulated data that mimics customers behavior on the Starbucks rewards mobile app to explore how can we improve the customers engagement & response towards the different type of offers promoted systematically.  Along this line, hopes that it can help to increase the customers purchases, improving Starbucks revenue and market segment.
 
 I will explore the different recommendation engines to promote personalized offers for Starbucks broad customers base.  Primary focus are centralized around 3 use cases below:
-	1. Offer recommendation for new customer that we don't have any of their personalized info or purchasing behavior to cross reference
-	2. Offer recommendation for customer based on different customers segment
-	3. Offer recommendation for customer based on similar customer-offer interactions
+1. Offer recommendation for new customer that we don't have any of their personalized info or purchasing behavior to cross reference
+2. Offer recommendation for customer based on different customers segment
+3. Offer recommendation for customer based on similar customer-offer interactions
 
 ## Methodology<a name="methodology"></a>
 
@@ -55,45 +55,40 @@ CRISP-DM (cross-industry process for data mining) methodology is used to help pr
 
 ## File Descriptions <a name="files"></a>
 
-1. The data is contained in three files:
+	1. The data is contained in three files.  Here is the schema and explanation of each variable in the files:
 
-	a. portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
-	b. profile.json - demographic data for each customer
-	c. transcript.json - records for transactions, offers received, offers viewed, and offers completed
+		a. portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
+			• id (string) - offer id
+			• offer_type (string) - type of offer ie BOGO, discount, informational
+			• difficulty (int) - minimum required spend to complete an offer
+			• reward (int) - reward given for completing an offer
+			• duration (int) - time for offer to be open, in days
+			• channels (list of strings)
+		b. profile.json - demographic data for each customer
+			• age (int) - age of the customer
+			• became_member_on (int) - date when customer created an app account
+			• gender (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)
+			• id (str) - customer id
+			• income (float) - customer's income
+		c. transcript.json - records for transactions, offers received, offers viewed, and offers completed
+			• event (str) - record description (ie transaction, offer received, offer viewed, etc.)
+			• person (str) - customer id
+			• time (int) - time in hours since start of test. The data begins at time t=0
+			• value - (dict of strings) - either an offer id or transaction amount depending on the record
 
-	Here is the schema and explanation of each variable in the files:
-	a. portfolio.json
-		i. id (string) - offer id
-		ii. offer_type (string) - type of offer ie BOGO, discount, informational
-		• difficulty (int) - minimum required spend to complete an offer
-		• reward (int) - reward given for completing an offer
-		• duration (int) - time for offer to be open, in days
-		• channels (list of strings)
-	b. profile.json
-		• age (int) - age of the customer
-		• became_member_on (int) - date when customer created an app account
-		• gender (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)
-		• id (str) - customer id
-		• income (float) - customer's income
-	c. transcript.json
-		• event (str) - record description (ie transaction, offer received, offer viewed, etc.)
-		• person (str) - customer id
-		• time (int) - time in hours since start of test. The data begins at time t=0
-		value - (dict of strings) - either an offer id or transaction amount depending on the record
+	2. Starbucks_Capstone_notebook.ipynb is to showcase work related to the above.  I separated the notebook to multiple sections of exploratory analysis & modelling that lead to answering the questions above.  Markdown cells were used to assist in walking through the thought process for individual steps.  
 
-2. Starbucks_Capstone_notebook.ipynb is to showcase work related to the above.  I separated the notebook to multiple sections of exploratory analysis & modelling that lead to answering the questions above.  Markdown cells were used to assist in walking through the thought process for individual steps.  
-
-3. data_analysis_model.py - the scripted file contained of all the customs functions created for data preprocessing, data analysis, graph plotting and modellings.  This way it help to make the code clean and neat to maintain as well.
+	3. data_analysis_model.py - the scripted file contained of all the customs functions created for data preprocessing, data analysis, graph plotting and modellings.  This way it help to make the code clean and neat to maintain as well.
 
 
 ## Results<a name="results"></a>
 
-The main findings of the code can be found at the post available [here](https://medium.com/@hong.ling.goh/random-forest-for-predicting-city-hotel-booking-cancellation-17222fe479b).
+The full report of this project can be found at the post available [here](https://medium.com/@hong.ling.goh/random-forest-for-predicting-city-hotel-booking-cancellation-17222fe479b).
 
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
 	1. Credits to Starbucks for publishing and sharing the simulated data as well as their business challenges to assist with this project.  
-	2. Age Group Categorization refences from https://v12data.com/blog/generational-consumer-shopping-trends/    
+	2. Age Group Categorization references from https://v12data.com/blog/generational-consumer-shopping-trends/    
 	3. There are few improvements can be done further for this project.  Hence, feel free to use the code here as you would like to strengthen the model to next level of excellence! 
 
