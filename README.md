@@ -57,14 +57,14 @@ CRISP-DM (cross-industry process for data mining) methodology is used to help pr
 
 1. The data is contained in three files:
 
-	portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
-	profile.json - demographic data for each customer
-	transcript.json - records for transactions, offers received, offers viewed, and offers completed
+	a. portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
+	b. profile.json - demographic data for each customer
+	c. transcript.json - records for transactions, offers received, offers viewed, and offers completed
 
 	Here is the schema and explanation of each variable in the files:
 	a. portfolio.json
-		• id (string) - offer id
-		• offer_type (string) - type of offer ie BOGO, discount, informational
+		i. id (string) - offer id
+		ii. offer_type (string) - type of offer ie BOGO, discount, informational
 		• difficulty (int) - minimum required spend to complete an offer
 		• reward (int) - reward given for completing an offer
 		• duration (int) - time for offer to be open, in days
