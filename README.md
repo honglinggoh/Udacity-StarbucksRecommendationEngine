@@ -83,7 +83,7 @@ CRISP-DM (cross-industry process for data mining) methodology is used to help pr
 
 ## Results<a name="results"></a>
 
-The full report of this project can be found at the post available [here](https://medium.com/@hong.ling.goh/random-forest-for-predicting-city-hotel-booking-cancellation-17222fe479b).
+The full report of this project can be found at the post available [here](https://medium.com/@hong.ling.goh/personalize-starbucks-offer-recommendation-engines-b82506595f67).
 
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
